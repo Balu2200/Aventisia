@@ -13,7 +13,7 @@ async def get_repositories(username : str):
     try:
         return await service.get_repo(username)
     except Exception as e:
-        raise HTTPException(status_code=500, details=str(e))
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 
@@ -23,7 +23,7 @@ async def get_issues(owner : str,  repo: str):
         return await service.list_issues(owner, repo)
 
     except Exception as e:
-        raise HTTPException(status_code=500, details=str(e))
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 @router.post("/create-issues")
@@ -36,4 +36,4 @@ async def create_issues(data : IssueCreate):
             data.body
         )
     except Exception as e:
-        raise HTTPException(status_code=500, details=str(e))
+        raise HTTPException(status_code=500, detail=str(e))

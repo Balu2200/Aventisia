@@ -9,5 +9,4 @@ class Settings:
     GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
     GITHUB_API = os.getenv("GITHUB_API")
 
-
 settings = Settings()
