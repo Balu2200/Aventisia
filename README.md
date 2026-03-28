@@ -123,7 +123,7 @@ Request body:
   "repo": "your-repo",
   "title": "New Feature",
   "head": "feature-branch",
-  "base": "main",
-  "body": "Description of changes"
+  "base": "master/main",
+  "body": "Description of changes from this branch"
 }
 ```
